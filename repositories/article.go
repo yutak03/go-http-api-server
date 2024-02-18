@@ -3,7 +3,7 @@ package repositories
 import (
 	"database/sql"
 
-	"github.com/Yusuketake620/my-api-server/models"
+	"github.com/yutak03/go-http-api-server/models"
 )
 
 const (
