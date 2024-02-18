@@ -3,8 +3,8 @@ package repositories_test
 import (
 	"testing"
 
-	"github.com/yutak03/my-api-server/models"
-	"github.com/yutak03/my-api-server/repositories"
+	"github.com/yutak03/go-http-api-server/models"
+	"github.com/yutak03/go-http-api-server/repositories"
 
 	_ "github.com/go-sql-driver/mysql"
 )

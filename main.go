@@ -6,7 +6,7 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"github.com/yutak03/my-api-server/handlers"
+	"github.com/yutak03/go-http-api-server/handlers"
 )
 
 func main() {

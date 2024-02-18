@@ -1,4 +1,4 @@
-module github.com/yutak03/my-api-server
+module github.com/yutak03/go-http-api-server
 
 go 1.21.5
 

@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/yutak03/my-api-server/models"
+	"github.com/yutak03/go-http-api-server/models"
 )
 
 func HelloHandler(w http.ResponseWriter, req *http.Request) {
