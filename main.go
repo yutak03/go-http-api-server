@@ -5,8 +5,8 @@ import (
 	"log/slog"
 	"net/http"
 
-	"github.com/Yusuketake620/my-api-server/handlers"
 	"github.com/gorilla/mux"
+	"github.com/yutak03/my-api-server/handlers"
 )
 
 func main() {
