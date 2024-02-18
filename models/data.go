@@ -29,11 +29,11 @@ var (
 	}
 
 	Article2 = Article{
-		ID:          2,
-		Title:       "second article",
-		Contents:    "This is the test article",
-		UserName:    "saki",
-		NiceNum:     2,
-		CreatedAt:   time.Now(),
+		ID:        2,
+		Title:     "second article",
+		Contents:  "This is the test article",
+		UserName:  "saki",
+		NiceNum:   2,
+		CreatedAt: time.Now(),
 	}
 )

@@ -13,25 +13,25 @@ import (
 func TestSelectArticleDetail(t *testing.T) {
 	tests := []struct {
 		testTitle string
-		expected models.Article
+		expected  models.Article
 	}{
 		{
 			testTitle: "subtest1",
 			expected: models.Article{
-				ID: 1,
-				Title: "First post",
+				ID:       1,
+				Title:    "First post",
 				Contents: "This is my first blog",
 				UserName: "Yusuke",
-				NiceNum: 2,
+				NiceNum:  2,
 			},
 		}, {
 			testTitle: "subtest2",
 			expected: models.Article{
-				ID: 2,
-				Title: "2nd",
+				ID:       2,
+				Title:    "2nd",
 				Contents: "Second blog post",
 				UserName: "Yusuke",
-				NiceNum: 4,
+				NiceNum:  4,
 			},
 		},
 	}

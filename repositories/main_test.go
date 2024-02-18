@@ -34,7 +34,7 @@ func TestMain(m *testing.M) {
 	if err != nil {
 		os.Exit(1)
 	}
-	
+
 	m.Run()
 	teardown()
 }
