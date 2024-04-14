@@ -14,7 +14,7 @@ var testDB *sql.DB
 func setup() error {
 	dbUser := "docker"
 	dbPassword := "docker"
-	dbDatabase := "articledb"
+	dbDatabase := "sampledb"
 	dbConn := fmt.Sprintf("%s:%s@tcp(127.0.0.1:3306)/%s?parseTime=true", dbUser, dbPassword, dbDatabase)
 
 	var err error

@@ -13,7 +13,7 @@ const (
 // 新規投稿をDBにinsertする関数
 func InsertArticle(db *sql.DB, article models.Article) (models.Article, error) {
 	const sqlStr = `
-	INSERT INTO article (title, contents, username, nice, created_at) values
+	INSERT INTO articles (title, contents, username, nice, created_at) values
 	(?, ?, ?, 0, now());
 	`
 
@@ -36,7 +36,7 @@ func InsertArticle(db *sql.DB, article models.Article) (models.Article, error) {
 func SelectArticleList(db *sql.DB, page int) ([]models.Article, error) {
 	const sqlStr = `
 		SELECT article_id, title, contents, username, nice
-		FROM article
+		FROM articles
 		LIMIT ? offset ?;
 	`
 
@@ -60,7 +60,7 @@ func SelectArticleList(db *sql.DB, page int) ([]models.Article, error) {
 func SelectArticleDetail(db *sql.DB, articleID int) (models.Article, error) {
 	const sqlStr = `
 		SELECT *
-		FROM article
+		FROM articles
 		WHERE article_id = ?;
 	`
 	row := db.QueryRow(sqlStr, articleID)
@@ -91,7 +91,7 @@ func UpdateNiceNum(db *sql.DB, articleID int) error {
 
 	const sqlGetNice = `
 		SELECT nice
-		FROM article
+		FROM articles
 		WHERE article_id = ?;
 	`
 	row := tx.QueryRow(sqlGetNice, articleID)
@@ -107,7 +107,7 @@ func UpdateNiceNum(db *sql.DB, articleID int) error {
 		return err
 	}
 
-	const sqlUpdateNice = `UPDATE article SET nice = ? WHERE article_id = ?`
+	const sqlUpdateNice = `UPDATE articles SET nice = ? WHERE article_id = ?`
 	_, err = tx.Exec(sqlUpdateNice, nicenum+1, articleID)
 	if err != nil {
 		tx.Rollback()
