@@ -81,10 +81,10 @@ func TestInsertArticle(t *testing.T) {
 	article := models.Article{
 		Title: "insertTest",
 		Contents: "testtest",
-		UserName: "Yusuke",
+		UserName: "Joh",
 	}
 
-	expectedArticleNum := 3
+	expectedArticleNum := 6
 	newArticle, err := repositories.InsertArticle(testDB, article)
 	if err != nil {
 		t.Error(err)
